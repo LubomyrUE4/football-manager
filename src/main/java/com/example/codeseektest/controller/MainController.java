@@ -1,7 +1,7 @@
 package com.example.codeseektest.controller;
 
 import com.example.codeseektest.exception.DefaultException;
-import com.example.codeseektest.model.TransferForm;
+import com.example.codeseektest.dto.TransferForm;
 import com.example.codeseektest.service.MainService;
 import com.example.codeseektest.service.PlayerService;
 import com.example.codeseektest.service.TeamService;
