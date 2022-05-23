@@ -9,11 +9,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class MainService {
     private final PlayerService playerService;
     private final TeamService teamService;
@@ -27,6 +29,9 @@ public class MainService {
         }
 
         Team prevTeam = player.getTeam();
+        if(prevTeam.equals(newTeam)) {
+            throw new DefaultException("The player is already in that team", HttpStatus.FORBIDDEN);
+        }
 
         int initialFee = (int) Math.round(player.getExperienceInMonths() * 100000.0 / player.getAge());
         int commission = (int) Math.round(prevTeam.getCommissionPercent() / 100.0 * initialFee);

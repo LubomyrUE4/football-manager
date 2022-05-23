@@ -2,7 +2,7 @@ package com.example.codeseektest.controller;
 
 import com.example.codeseektest.domain.Team;
 import com.example.codeseektest.exception.DefaultException;
-import com.example.codeseektest.model.TeamForm;
+import com.example.codeseektest.dto.TeamForm;
 import com.example.codeseektest.service.TeamService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

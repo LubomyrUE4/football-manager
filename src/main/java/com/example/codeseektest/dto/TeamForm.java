@@ -1,4 +1,4 @@
-package com.example.codeseektest.model;
+package com.example.codeseektest.dto;
 
 import lombok.Data;
 

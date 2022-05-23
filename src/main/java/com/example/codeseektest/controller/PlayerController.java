@@ -2,7 +2,7 @@ package com.example.codeseektest.controller;
 
 import com.example.codeseektest.domain.Player;
 import com.example.codeseektest.exception.DefaultException;
-import com.example.codeseektest.model.PlayerForm;
+import com.example.codeseektest.dto.PlayerForm;
 import com.example.codeseektest.service.PlayerService;
 import com.example.codeseektest.service.TeamService;
 import lombok.RequiredArgsConstructor;
